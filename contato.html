@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Gonzaga Elétrica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #000; color: #fff; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px; }
+        .contato-card { background: #111; padding: 40px; border-radius: 20px; border: 1px solid #333; text-align: center; max-width: 600px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .qrcode-box img { width: 220px; border: 8px solid #fff; border-radius: 15px; margin: 20px 0; transition: transform 0.3s; }
+        .qrcode-box img:hover { transform: scale(1.05); }
+        .info-detalhe { margin: 20px 0; text-align: left; background: #1a1a1a; padding: 20px; border-radius: 10px; border-left: 4px solid #ff9100; }
+        .info-detalhe p { margin: 10px 0; font-size: 15px; }
+        .mapa-contato { width: 100%; height: 250px; border-radius: 15px; margin: 20px 0; border: 1px solid #444; }
+    </style>
+</head>
+<body>
+    <div class="contato-card">
+        <h1 style="color: #ff9100;">GONZAGA</h1>
+        <p>Elétrica, Iluminação e Utilidades</p>
+
+        <div class="qrcode-box">
+            <img src="img/whatsapp_qr.png" alt="Escaneie para falar conosco">
+            <p style="font-size: 13px; color: #888;">Escaneie o código acima</p>
+        </div>
+
+        <div class="info-detalhe">
+            <p><i class="fa-solid fa-location-dot" style="color:#ff9100"></i> <strong>Endereço:</strong> Estr. Kizaemon Takeuti, 2002 - Jd. Guaciara, Taboão da Serra - SP</p>
+            <p><i class="fa-solid fa-clock" style="color:#ff9100"></i> <strong>Horário:</strong> Seg a Sex: 08h às 18h | Sáb: 08h às 13h</p>
+            <p><i class="fa-brands fa-whatsapp" style="color:#25d366"></i> <strong>WhatsApp:</strong> (11) 98892-3919</p>
+        </div>
+
+        <iframe class="mapa-contato" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.666277258019!2d-46.7925567!3d-23.61625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce52627e4e137b%3A0x6792348577a6f23e!2sEstrada%20Kizaemon%20Takeuti%2C%202002!5e0!3m2!1spt-BR!2sbr!4v1715012345678!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+
+        <a href="https://wa.me/5511988923919?text=Olá,%20vim%20pelo%20site" target="_blank" class="btn-route-pill">
+            <i class="fa-brands fa-whatsapp"></i> Conversar Agora
+        </a>
+
+        <br><br>
+        <a href="index.html" style="color: #666; text-decoration: none;">← Voltar para o site</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gonzaga Elétrica e Utilidades | Materiais Elétricos em Taboão da Serra</title>
+    <meta name="description" content="Especialistas em materiais elétricos, iluminação e utilidades em Taboão da Serra. Qualidade, preço justo e atendimento profissional. Solicite orçamento!">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HardwareStore",
+      "name": "Gonzaga Elétrica",
+      "image": "android-chrome-512x512.png",
+      "telephone": "+5511988923919",
+      "email": "gonzagaaeletrica@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Estr. Kizaemon Takeuti, 2002",
+        "addressLocality": "Taboão da Serra",
+        "addressRegion": "SP",
+        "postalCode": "06775-002",
+        "addressCountry": "BR"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo" aria-label="Ir para a página inicial">
+                <h1>GONZAGA</h1>
+                <span>ELÉTRICA E UTILIDADES</span>
+            </a>
+            <div class="search-container">
+                <input type="text" id="main-search" placeholder="Buscar produtos, marcas, SKUs..." aria-label="Buscar produtos">
+                <button type="submit" aria-label="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <a href="contato.html" style="color:white; text-decoration:none; display:flex; align-items:center; gap:8px;">
+                <i class="fa-brands fa-whatsapp" style="color: #ff9100; font-size: 24px;"></i>
+                <span style="font-size: 13px; font-weight: 600;">Fale Conosco</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <aside class="sidebar">
+            <h3 style="margin-bottom: 20px; font-size: 14px; text-transform: uppercase; color: #ff9100;">Departamentos</h3>
+            <nav class="category-menu">
+                <ul>
+                    <li class="category-item active" data-category="todos"><a href="#"><i class="fa-solid fa-border-all"></i> Catálogo Completo</a></li>
+                    <li class="category-item" data-category="iluminacao"><a href="#"><i class="fa-solid fa-lightbulb"></i> Iluminação</a></li>
+                    <li class="category-item" data-category="eletrica"><a href="#"><i class="fa-solid fa-bolt"></i> Elétrica e Quadros</a></li>
+                    <li class="category-item" data-category="ferramentas"><a href="#"><i class="fa-solid fa-screwdriver-wrench"></i> Ferramentas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section style="flex: 1;">
+            <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px;">
+                <h2 id="current-category-name" style="font-size: 18px; color: #111827;">Catálogo Completo</h2>
+                <span id="product-count" style="font-size: 13px; color: #6b7280; font-weight: 500;">Carregando...</span>
+            </div>
+            <div class="products-grid" id="products-grid"></div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h3>Atendimento</h3>
+                <img src="img/whatsapp_qr.png" alt="QR Code WhatsApp" class="footer-qr">
+                <p><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> (11) 98892-3919</p>
+                <p><i class="fa-solid fa-envelope"></i> gonzagaaeletrica@gmail.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Nossa Loja</h3>
+                <p><i class="fa-solid fa-location-dot" style="color: #ff9100;"></i> Estr. Kizaemon Takeuti, 2002<br>Jardim Guaciara<br>Taboão da Serra - SP<br>CEP: 06775-002</p>
+                <ul style="margin-top: 15px;">
+                    <li><strong>Seg a Sex:</strong> 08:00 - 18:00</li>
+                    <li><strong>Sábado:</strong> 08:00 - 13:00</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <a href="institucional.html#quem-somos" class="footer-link">Quem Somos</a>
+                <a href="institucional.html#trocas" class="footer-link">Trocas e Devoluções</a>
+                <a href="institucional.html#privacidade" class="footer-link">Política de Privacidade</a>
+                <br>
+                <p style="font-size: 12px; border-top: 1px solid #333; padding-top: 10px;">
+                    <strong>Gonzaga Elétrica e Utilidades</strong><br>
+                    CNPJ: 51.140.718/0001-14
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2026 Gonzaga Elétrica. Todos os direitos reservados. Site seguro e protegido.</p>
+        </div>
+    </footer>
+
+    <script src="bancodedados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

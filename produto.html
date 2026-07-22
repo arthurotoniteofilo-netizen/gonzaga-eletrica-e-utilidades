@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto - Gonzaga Elétrica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
+                <h1>GONZAGA</h1>
+            </div>
+            <div class="back-button-wrapper">
+                <a href="index.html" class="btn-back-styled">
+                    <i class="fa-solid fa-chevron-left"></i> Voltar ao Catálogo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 40px; margin-bottom: 40px;">
+        <div class="product-layout">
+
+            <div class="product-gallery">
+                <div class="gallery-shell">
+                    <div class="main-image-container">
+                        <img id="detalhe-imagem" src="" alt="Carregando produto...">
+                        <button type="button" class="zoom-hint" aria-label="Ampliar imagem"><i class="fa-solid fa-magnifying-glass-plus"></i> Zoom</button>
+                    </div>
+                    <div id="gallery-thumbs" class="gallery-thumbs"></div>
+                </div>
+            </div>
+
+            <div class="product-info-column">
+                <span id="detalhe-sku" class="sku-text">REF: ------</span>
+                <h1 id="detalhe-nome" class="product-title">Carregando Nome do Produto...</h1>
+
+                <div id="product-badges" class="product-badges"></div>
+
+                <div class="rating-stars" style="color: #ffcc00;">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span style="color: #666; font-size: 12px; margin-left: 5px;">(5.0)</span>
+                </div>
+
+                <div class="pricing-panel">
+                    <div class="price-box">
+                        <span class="price-label">Preço sob consulta</span>
+                        <button id="btn-whats-detalhe" class="btn-whatsapp-pulsar btn-consultar">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar no WhatsApp
+                        </button>
+                    </div>
+
+                    <div class="delivery-card">
+                        <div class="delivery-item">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <div>
+                                <strong>Entrega Expressa</strong>
+                                <p>Consulte taxas e prazos para sua região.</p>
+                            </div>
+                        </div>
+                        <div class="delivery-item">
+                            <i class="fa-solid fa-store"></i>
+                            <div>
+                                <strong>Retirada na Loja</strong>
+                                <p>Estr. Kizaemon Takeuti, 2002 - Grátis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-description-section">
+            <h2>Descrição do Produto</h2>
+            <p id="detalhe-descricao"></p>
+
+            <h2>Especificações Técnicas</h2>
+            <div id="specs-body" class="tech-highlights"></div>
+
+            <section id="related-products" class="related-products"></section>
+        </div>
+    </main>
+
+    <!-- Primeiro carregamos o banco de dados -->
+    <script src="bancodedados.js"></script>
+
+    <!-- Depois carregamos a lógica que utiliza o banco -->
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const skuUrl = params.get('sku') ? params.get('sku').replace(/[^a-zA-Z0-9-]/g, '') : null;
+
+            if (skuUrl) {
+                preencherDetalhesProduto(skuUrl);
+            } else {
+                document.querySelector('.product-layout').innerHTML = '<h2>Produto não encontrado.</h2>';
+            }
+        });
+    </script>
+</body>
+
+</html>
