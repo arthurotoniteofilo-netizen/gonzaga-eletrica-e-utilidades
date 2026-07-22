@@ -13,9 +13,9 @@
 
     <header class="main-header">
         <div class="container header-flex">
-            <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
+            <a href="index.html" class="logo">
                 <h1>GONZAGA</h1>
-            </div>
+            </a>
             <div class="back-button-wrapper">
                 <a href="index.html" class="btn-back-styled">
                     <i class="fa-solid fa-chevron-left"></i> Voltar ao Catálogo
@@ -93,18 +93,6 @@
 
     <!-- Depois carregamos a lógica que utiliza o banco -->
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const skuUrl = params.get('sku') ? params.get('sku').replace(/[^a-zA-Z0-9-]/g, '') : null;
-
-            if (skuUrl) {
-                preencherDetalhesProduto(skuUrl);
-            } else {
-                document.querySelector('.product-layout').innerHTML = '<h2>Produto não encontrado.</h2>';
-            }
-        });
-    </script>
 </body>
 
 </html>

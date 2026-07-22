@@ -43,10 +43,12 @@ function carregarProdutos(lista) {
                 </div>
                 <h3 class="card-title">${safeNome}</h3>
             </a>
-            <button class="btn-consultar" onclick="consultarZapGeral('${safeNome}', '${safeSku}')" aria-label="Consultar ${safeNome} no WhatsApp">
+            <button class="btn-consultar" aria-label="Consultar ${safeNome} no WhatsApp">
                 <i class="fa-brands fa-whatsapp"></i> Consultar
             </button>
         `;
+        const consultButton = card.querySelector('.btn-consultar');
+        consultButton.addEventListener('click', () => consultarZapGeral(p.nome, p.sku));
         grid.appendChild(card);
     });
 
